@@ -21,3 +21,9 @@ When all questions are answered or the timer reaches 0
 
 Once the game is over
 - User will be able to save their initials and score
+
+## Mock-Up Example
+
+The following animation demonstrates the application functionality:
+
+![code-quiz](./assets/web-apis-demo.gif)
