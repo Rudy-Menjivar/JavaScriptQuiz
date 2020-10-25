@@ -54,4 +54,5 @@ var questions = [
 ]
 
 // Global variables
+var highScores = document.querySelector("#highScores");
 var timeLeft = document.querySelector("#timeLeft");
