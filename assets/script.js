@@ -52,3 +52,6 @@ var questions = [
         answer: 'd'
     },
 ]
+
+// Global variables
+var timeLeft = document.querySelector("#timeLeft");
