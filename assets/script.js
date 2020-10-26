@@ -58,5 +58,9 @@ var highScores = document.querySelector("#highScores");
 var timeLeft = document.querySelector("#timeLeft");
 var startQuiz = document.querySelector("#startQuiz");
 
+// Starting score
 var score = 0;
+
+// HTML DOM Var Objects
+var questionNumber = document.querySelector("#questionNumber")
 
