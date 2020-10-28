@@ -74,6 +74,7 @@ startTimer.addEventListener("click", function() {
     if (timeLeft > 0) {
         timeLeft--
         timerContent.textContent = "Time: " + timeLeft;
+        timerContent.style = ("font-weight: bold");
     } else {
         // Clear timer set by setInterval
         clearInterval(startTimer);
