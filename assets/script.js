@@ -89,3 +89,7 @@ startTimer.addEventListener("click", function() {
     }, 1000)
 })
 
+// Display questions and multiple choices to window
+function loadNextQuestion(questionIndex) {
+    
+}
