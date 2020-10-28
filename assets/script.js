@@ -97,6 +97,8 @@ function loadNextQuestion(questionIndex) {
     newP.innerHTML = "";
     // For loop to loop through data in array
     for (var i = 0; i < questions.length; i++) {
-        console.log(i)
+        // Loads current question
+        var loadNextQuestion = questions[questionIndex].currentQuestion;
+        console.log(loadNextQuestion)
     }
 }
