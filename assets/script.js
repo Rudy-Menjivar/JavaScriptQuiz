@@ -69,6 +69,12 @@ var penalty = 15;
 
 // Begin timer with button click
 startTimer.addEventListener("click", function() {
-    console.log(startTimer)
+    // Timer set to seconds with first function to run while time > 0
+    startTimer = setInterval(function() {
+    if (timeLeft > 0) {
+        timeLeft--
+        console.log(startTimer)
+    }
+    }, 1000)
 })
 
