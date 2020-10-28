@@ -95,4 +95,8 @@ function loadNextQuestion(questionIndex) {
     // Clear existing content for both questions & multiple choices
     mainContent.innerHTML = "";
     newP.innerHTML = "";
+    // For loop to loop through data in array
+    for (var i = 0; i < questions.length; i++) {
+        console.log(i)
+    }
 }
