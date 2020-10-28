@@ -79,6 +79,7 @@ startTimer.addEventListener("click", function() {
         clearInterval(startTimer);
         // Change time to this text
         timerContent.textContent = "Time ran out on you!";
+        timerContent.style = ("color: red; font-weight: bold");
     }
     }, 1000)
 })
