@@ -64,5 +64,5 @@ var timeLeft = 60;
 var penalty = 15;
 
 // HTML DOM Var Objects
-var questionNumber = document.querySelector("#questionNumber")
+var mainContent = document.querySelector("#quizContent")
 
