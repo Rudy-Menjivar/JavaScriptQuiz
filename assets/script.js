@@ -92,6 +92,7 @@ startTimer.addEventListener("click", function() {
 
 // Display questions and multiple choices to window
 function loadNextQuestion(questionIndex) {
-    // Clear existing content
+    // Clear existing content for both questions & multiple choices
     mainContent.innerHTML = "";
+    newP.innerHTML = "";
 }
