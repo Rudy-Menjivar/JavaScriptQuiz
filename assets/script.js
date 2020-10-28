@@ -101,5 +101,7 @@ function loadNextQuestion(questionIndex) {
         var loadNextQuestion = questions[questionIndex].currentQuestion;
         // Loads current multiple choice options
         var multipleChoice = questions[questionIndex].multipleChoices;
+        // mainContent will now render questions
+        mainContent.textContent = loadNextQuestion;
     }
 }
