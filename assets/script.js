@@ -61,12 +61,14 @@ var startTimer = document.querySelector("#startQuiz");
 // HTML DOM Var Objects
 var mainContent = document.querySelector("#quizContent")
 
-// Starting score
+// Starting score, starting time, penalty and question index
 var score = 0;
 var timeLeft = 6;
 var penalty = 15;
 var questionIndex = 0;
 
+// Var to create new elements
+var newP = document.createElement("p");
 
 // Begin timer with button click
 startTimer.addEventListener("click", function() {
