@@ -99,6 +99,7 @@ function loadNextQuestion(questionIndex) {
     for (var i = 0; i < questions.length; i++) {
         // Loads current question
         var loadNextQuestion = questions[questionIndex].currentQuestion;
-        console.log(loadNextQuestion)
+        // Loads current multiple choice options
+        var multipleChoice = questions[questionIndex].multipleChoices;
     }
 }
