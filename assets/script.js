@@ -1,6 +1,6 @@
 
 // Array of questions with choices and correct answers
-var questions = [
+var questionsObject = [
     {
         currentQuestion: 'What is not true about the Constant JavaScript statement?',
         multipleChoices: {
@@ -53,6 +53,12 @@ var questions = [
     },
 ]
 
+// Starting score, starting time, penalty and question index
+var score = 0;
+var questionIndex = 0;
+var timeLeft = 6;
+var penalty = 15;
+
 // Global variables
 var viewHighScores = document.querySelector("#highScores");
 var timerContent = document.querySelector("#timeLeft");
@@ -60,12 +66,6 @@ var startTimer = document.querySelector("#startQuiz");
 
 // HTML DOM Var Objects
 var mainContent = document.querySelector("#quizContent")
-
-// Starting score, starting time, penalty and question index
-var score = 0;
-var timeLeft = 6;
-var penalty = 15;
-var questionIndex = 0;
 
 // Declared VARs to create new elements
 var newP = document.createElement("p");
@@ -76,7 +76,7 @@ startTimer.addEventListener("click", function() {
     // Timer set to seconds with first function to run while time > 0
     startTimer = setInterval(function() {
     if (timeLeft > 0) {
-        timeLeft--
+        timeLeft--;
         timerContent.textContent = "Time: " + timeLeft;
         timerContent.style = ("font-weight: bold");
     } else {
@@ -88,7 +88,7 @@ startTimer.addEventListener("click", function() {
     }
     }, 1000)
     loadNextQuestion(questionIndex);
-})
+});
 
 // Display questions and multiple choices to window
 function loadNextQuestion(questionIndex) {
@@ -96,12 +96,13 @@ function loadNextQuestion(questionIndex) {
     mainContent.innerHTML = "";
     newP.innerHTML = "";
     // For loop to loop through data in array
-    for (var i = 0; i < questions.length; i++) {
+    for (var i = 0; i < questionsObject.length; i++) {
         // Loads current question
-        var loadNextQuestion = questions[questionIndex].currentQuestion;
+        var loadNextQuestion = questionsObject[questionIndex].currentQuestion;
         // Loads current multiple choice options
-        var multipleChoice = questions[questionIndex].multipleChoices;
+        var multipleChoice = questionsObject[questionIndex].multipleChoices;
         // mainContent will now render questions
         mainContent.textContent = loadNextQuestion;
     }
+    
 }
