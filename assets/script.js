@@ -63,7 +63,7 @@ var mainContent = document.querySelector("#quizContent")
 
 // Starting score
 var score = 0;
-var timeLeft = 60;
+var timeLeft = 6;
 var penalty = 15;
 
 
@@ -73,7 +73,7 @@ startTimer.addEventListener("click", function() {
     startTimer = setInterval(function() {
     if (timeLeft > 0) {
         timeLeft--
-        console.log(startTimer)
+        timerContent.textContent = "Time: " + timeLeft;
     }
     }, 1000)
 })
