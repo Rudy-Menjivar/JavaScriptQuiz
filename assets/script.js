@@ -56,10 +56,12 @@ var questions = [
 // Global variables
 var highScores = document.querySelector("#highScores");
 var timeLeft = document.querySelector("#timeLeft");
-var startQuiz = document.querySelector("#startQuiz");
+var startTimer = document.querySelector("#startQuiz");
 
 // Starting score
 var score = 0;
+var timeLeft = 60;
+var penalty = 15;
 
 // HTML DOM Var Objects
 var questionNumber = document.querySelector("#questionNumber")
