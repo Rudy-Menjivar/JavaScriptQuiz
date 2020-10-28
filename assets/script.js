@@ -67,8 +67,9 @@ var timeLeft = 6;
 var penalty = 15;
 var questionIndex = 0;
 
-// Var to create new elements
+// Declared VARs to create new elements
 var newP = document.createElement("p");
+var newButton = document.createElement("button");
 
 // Begin timer with button click
 startTimer.addEventListener("click", function() {
