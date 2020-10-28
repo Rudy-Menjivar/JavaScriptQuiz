@@ -3,7 +3,7 @@
 var questions = [
     {
         currentQuestion: 'What is not true about the Constant JavaScript statement?',
-        answerChoices: {
+        multipleChoices: {
             a: 'Const behave much like let variables',
             b: 'Const variables must be assigned a value whe they are declared',
             c: 'Constants values cannot include a function expression',
@@ -13,7 +13,7 @@ var questions = [
     },
     {
         currentQuestion: 'What is true about JavaScript Loops?',
-        answerChoices: {
+        multipleChoices: {
             a: 'Loops can execute a block of code a limited number of times',
             b: 'for/in - loops through the properties of any object',
             c: 'for/if - loops through the values of iterable objects',
@@ -23,7 +23,7 @@ var questions = [
     },
     {
         currentQuestion: 'Which of the following value returns 5?',
-        answerChoices: {
+        multipleChoices: {
             a: 'Math.floor(1.5);;',
             b: 'Math.ceil(4.4);',
             c: 'Math.sin(5 * Math.PI / 1);',
@@ -33,7 +33,7 @@ var questions = [
     },
     {
         currentQuestion: 'Which of the following is not true?',
-        answerChoices: {
+        multipleChoices: {
             a: 'Use if to specify a block of code to be executed, if a specified condition is true',
             b: 'Use switch to specify many alternative blocks of code to be executed',
             c: 'Use else if to specify a new condition to test, if the first condition is true',
@@ -43,7 +43,7 @@ var questions = [
     },
     {
         currentQuestion: 'Which of the following is not true about JavaScript outputs?',
-        answerChoices: {
+        multipleChoices: {
             a: 'Writing into an HTML element, using innerHTML',
             b: 'Writing into the HTML output using the document.write()',
             c: 'The id attribute defines the HTML element',
