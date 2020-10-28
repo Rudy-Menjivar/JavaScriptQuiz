@@ -77,6 +77,8 @@ startTimer.addEventListener("click", function() {
     } else {
         // Clear timer set by setInterval
         clearInterval(startTimer);
+        // Change time to this text
+        timerContent.textContent = "Time ran out on you!";
     }
     }, 1000)
 })
