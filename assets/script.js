@@ -58,11 +58,17 @@ var viewHighScores = document.querySelector("#highScores");
 var timerContent = document.querySelector("#timeLeft");
 var startTimer = document.querySelector("#startQuiz");
 
+// HTML DOM Var Objects
+var mainContent = document.querySelector("#quizContent")
+
 // Starting score
 var score = 0;
 var timeLeft = 60;
 var penalty = 15;
 
-// HTML DOM Var Objects
-var mainContent = document.querySelector("#quizContent")
+
+// Begin timer with button click
+startTimer.addEventListener("click", function() {
+    console.log(startTimer)
+})
 
