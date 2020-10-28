@@ -87,9 +87,11 @@ startTimer.addEventListener("click", function() {
         timerContent.style = ("color: red; font-weight: bold");
     }
     }, 1000)
+    loadNextQuestion(questionIndex);
 })
 
 // Display questions and multiple choices to window
 function loadNextQuestion(questionIndex) {
-    
+    // Clear existing content
+    mainContent.innerHTML = "";
 }
