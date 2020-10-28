@@ -65,6 +65,7 @@ var mainContent = document.querySelector("#quizContent")
 var score = 0;
 var timeLeft = 6;
 var penalty = 15;
+var questionIndex = 0;
 
 
 // Begin timer with button click
