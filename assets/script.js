@@ -95,5 +95,9 @@ function loadNextQuestion(questionIndex) {
 function compare(event) {
     // declared element that triggered event
     var clickedEl = event.target;
-    console.log(clickedEl)
+
+    // if correct multChoice is clicked, then..
+    if (clickedEl.textContent == questionsObject[questionIndex].answer) {
+        alert("Correct!")
+    }
 }
