@@ -30,8 +30,8 @@ var questionsObject = [
 // Starting score, starting time, penalty and question index
 var score = 0;
 var questionIndex = 0;
-var timeLeft = 6;
-var penalty = 15;
+var timeLeft = 30;
+var penalty = 10;
 
 // Global variables
 var viewHighScores = document.querySelector("#highScores");
@@ -106,5 +106,7 @@ function compare(event) {
         console.log(newDiv)
     } else {
         timeLeft = timeLeft - penalty;
+        newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
+        console.log(newDiv)
     }
 }
