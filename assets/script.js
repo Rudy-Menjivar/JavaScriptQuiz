@@ -114,6 +114,7 @@ function compare(event) {
 
     // If no more questions, clear timer
     if (questionIndex >= questionsObject.length) {
+        endOfQuiz();
         clearInterval(startTimer);
     } else {
         loadNextQuestion(questionIndex);
