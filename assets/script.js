@@ -101,7 +101,7 @@ function compare(event) {
 
     // if correct multChoice is clicked, then..
     if (clickedEl.textContent == questionsObject[questionIndex].answer) {
-        newDiv.textContent = "Correct! ";
+        newDiv.textContent = "Correct! The answer is " + questionsObject[questionIndex].answer;
         console.log(newDiv)
     }
 }
