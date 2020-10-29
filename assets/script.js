@@ -172,7 +172,8 @@ function endOfQuiz() {
     subContent.appendChild(newButton);
 
     // added button click addEventListener 
-    newButton.addEventListener("click", function(){
-        console.log(newButton)
+    newButton.addEventListener("click", function(event){
+        // preventDefault added to prevent a page refresh
+        event.preventDefault();
     })
 }
