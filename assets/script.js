@@ -118,4 +118,7 @@ function compare(event) {
     } else {
         loadNextQuestion(questionIndex);
     }
+    // Displays newDiv textContent
+    mainContent.appendChild(newDiv);
+
 }
