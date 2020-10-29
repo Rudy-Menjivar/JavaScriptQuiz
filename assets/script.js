@@ -90,3 +90,10 @@ function loadNextQuestion(questionIndex) {
             listItem.addEventListener("click", (compare));
         })
 }
+
+// Compare multChoice clicked with answer
+function compare(event) {
+    // declared element that triggered event
+    var clickedEl = event.target;
+    console.log(clickedEl)
+}
