@@ -78,5 +78,15 @@ function loadNextQuestion(questionIndex) {
         // mainContent will now render questions
         mainContent.textContent = loadNextQuestion;
     }
-    
+        // Next multiple choice for each next question
+        multipleChoice.forEach(function(newItem) {
+            // multChoice presented on window
+            var listItem = document.createElement("dd");
+            // newItem contains text of multChoice
+            listItem.textContent = newItem;
+            mainContent.appendChild(newP);
+            newP.appendChild(listItem);
+            // Correct answer will be compared after click
+            listItem.addEventListener("click", (compare));
+        })
 }
