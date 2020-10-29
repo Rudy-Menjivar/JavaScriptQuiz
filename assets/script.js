@@ -184,7 +184,8 @@ function endOfQuiz() {
         if (initials.enterInitials === "") {
             alert("Initials cannot be blank");
         } else {
-            console.log(initials);
+            // set new submission
+            localStorage.setItem("initials", JSON.stringify(initials));
         }
     })
 }
