@@ -103,7 +103,7 @@ function compare(event) {
     if (clickedEl.textContent == questionsObject[questionIndex].answer) {
         score++;
         newDiv.textContent = "Correct! The answer is " + questionsObject[questionIndex].answer;
-        console.log(newDiv)
+        newDiv.style = ("color: blue; font-weight: bold");
     } else {
         timeLeft = timeLeft - penalty;
         newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
