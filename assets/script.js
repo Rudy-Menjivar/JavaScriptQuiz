@@ -175,5 +175,10 @@ function endOfQuiz() {
     newButton.addEventListener("click", function(event){
         // preventDefault added to prevent a page refresh
         event.preventDefault();
+        // initals declared with newInput element
+        var initials = {
+            enterInitials: newInput.value.trim(),
+        }
+        console.log(initials);
     })
 }
