@@ -47,6 +47,10 @@ var newP = document.createElement("p");
 newP.setAttribute("id", "newP");
 
 var newButton = document.createElement("button");
+newButton.setAttribute("type", "submit");
+newButton.setAttribute("id", "newButton");
+newButton.setAttribute("class", "btn btn-primary");
+newButton.textContent = "Submit";
 
 var newH2 = document.createElement("h2");
 newH2.setAttribute("id", "newH2");
@@ -164,5 +168,4 @@ function endOfQuiz() {
     // newInput created to enter initials
     newInput.placeholder = "Your initials"
     subContent.appendChild(newInput);
-
 }
