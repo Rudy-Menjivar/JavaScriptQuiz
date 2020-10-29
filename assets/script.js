@@ -142,11 +142,17 @@ function endOfQuiz() {
     newH2.textContent = "All done!";
 
 // Calculates final score + leftTime & appends to mainContent
-if (timeLeft >=0) {
-    var finalScore = score + timeLeft;
-    clearInterval(startTimer);
-    newP.textContent = "Your final score is: " + finalScore;
-    subContent.appendChild(newP);
-    newP.style = ("font-weight: bold");
+    if (timeLeft >=0) {
+        var finalScore = score + timeLeft;
+        clearInterval(startTimer);
+        newP.textContent = "Your final score is: " + finalScore;
+        subContent.appendChild(newP);
+        newP.style = ("font-weight: bold");
+    } else {
+        var finalScore = score
+        clearInterval(startTimer);
+        newP.textContent = "Your final score is: " + score;
+        subContent.appendChild(newP);
+        newP.style = ("font-weight: bold");
     }
 }
