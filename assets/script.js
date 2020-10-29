@@ -141,5 +141,6 @@ if (timeLeft >=0) {
     clearInterval(startTimer);
     newP.textContent = "Your final score is: " + finalScore;
     mainContent.appendChild(newP);
+    newP.style = ("font-weight: bold");
     }
 }
