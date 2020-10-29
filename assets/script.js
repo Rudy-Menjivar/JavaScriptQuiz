@@ -180,5 +180,10 @@ function endOfQuiz() {
             enterInitials: newInput.value.trim(),
         }
         console.log(initials);
+
+        // validate data to require input
+        if (initials.enterInitials === "") {
+            alert("Initials cannot be blank");
+        } 
     })
 }
