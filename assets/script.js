@@ -114,11 +114,12 @@ function compare(event) {
     // questionIndex increments through array
     questionIndex++;
 
-    // If no more questions, clear timer
+    // If no more questions, end quiz, clear timer & report score
     if (questionIndex >= questionsObject.length) {
         endOfQuiz();
         clearInterval(startTimer);
         newDiv.textContent = "Quiz has ended! " + "You got " + score + " out of " + questionsObject.length + " correct!";
+        newDiv.style = ("color: green; font-weight: bold");
     } else {
         loadNextQuestion(questionIndex);
     }
