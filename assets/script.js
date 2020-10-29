@@ -127,11 +127,19 @@ function compare(event) {
     // Append newDiv textContent to the quizContent div
     mainContent.appendChild(newDiv);
 }
-
+// At end of quiz, clear mainContent and timerContent
 function endOfQuiz() {
     mainContent.innerHTML = "";
     timerContent.innerHTML = "";
     // Append & render All Done to the quizContent div 
     mainContent.appendChild(newH2);
     newH2.textContent = "All done!";
+
+// Calculates final score + leftTime & appends to mainContent
+if (timeLeft >=0) {
+    var finalScore = score + timeLeft;
+    clearInterval(startTimer);
+    newP.textContent = "Your final score is: " + finalScore;
+    mainContent.appendChild(newP);
+    }
 }
