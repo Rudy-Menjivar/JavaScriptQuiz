@@ -54,6 +54,9 @@ newH2.setAttribute("id", "newH2");
 var newLabel = document.createElement("label");
 newLabel.setAttribute("id", "newLabel");
 
+var newInput = document.createElement("input");
+newInput.setAttribute("id", "newInput");
+
 // Begin timer with button click
 startTimer.addEventListener("click", function() {
     // Timer set to seconds with first function to run while time > 0
@@ -158,5 +161,8 @@ function endOfQuiz() {
     // newLabel created to prompt for initials
     newLabel.textContent = "Enter initials: "
     subContent.appendChild(newLabel);
+    // newInput created to enter initials
+    newInput.placeholder = "Your initials"
+    subContent.appendChild(newInput);
 
 }
