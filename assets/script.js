@@ -168,4 +168,11 @@ function endOfQuiz() {
     // newInput created to enter initials
     newInput.placeholder = "Your initials"
     subContent.appendChild(newInput);
+    // newButton added to for saving data
+    subContent.appendChild(newButton);
+
+    // added button click addEventListener 
+    newButton.addEventListener("click", function(){
+        console.log(newButton)
+    })
 }
