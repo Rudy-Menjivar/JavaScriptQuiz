@@ -14,7 +14,7 @@ var questionsObject = [
             'for/if - loops through the values of iterable objects',
             'do/while - also loops through a block of code while a specified condition is false'],
         answer: 'for/in - loops through the properties of any object'
-        },
+    },
     {
         currentQuestion: 'True or False? Use else if to specify a new condition to test, if the first condition is true.',
         multipleChoices: ['True', 'False'],
@@ -107,7 +107,7 @@ function compare(event) {
     } else {
         timeLeft = timeLeft - penalty;
         newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
-        console.log(newDiv)
+        newDiv.style = ("color: red; font-weight: bold");
     }
     // questionIndex increments through array
     questionIndex++;
