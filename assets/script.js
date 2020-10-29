@@ -123,11 +123,14 @@ function compare(event) {
     } else {
         loadNextQuestion(questionIndex);
     }
-    // Displays newDiv textContent
+    // Append newDiv textContent to the quizContent div
     mainContent.appendChild(newDiv);
 }
 
 function endOfQuiz() {
     mainContent.innerHTML = "";
     timerContent.innerHTML = "";
+    // Append & render All Done to the quizContent div 
+    mainContent.appendChild(newH2);
+    newH2.textContent = "All done!";
 }
