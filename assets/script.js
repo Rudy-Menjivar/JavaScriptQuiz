@@ -155,4 +155,8 @@ function endOfQuiz() {
         subContent.appendChild(newP);
         newP.style = ("font-weight: bold");
     }
+    // newLabel created to prompt for initials
+    newLabel.textContent = "Enter initials: "
+    subContent.appendChild(newLabel);
+
 }
