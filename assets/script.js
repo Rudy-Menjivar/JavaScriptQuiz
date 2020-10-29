@@ -43,6 +43,7 @@ var mainContent = document.querySelector("#quizContent")
 
 // Declared VARs to create new elements
 var newP = document.createElement("p");
+newP.setAttribute("id", "newP");
 var newButton = document.createElement("button");
 var newH2 = document.createElement("h2");
 newH2.setAttribute("id", "newH2");
