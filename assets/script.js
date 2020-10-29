@@ -120,5 +120,8 @@ function compare(event) {
     }
     // Displays newDiv textContent
     mainContent.appendChild(newDiv);
+}
 
+function endOfQuiz() {
+    mainContent.innerHTML = "";
 }
