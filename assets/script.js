@@ -111,4 +111,9 @@ function compare(event) {
     }
     // questionIndex increments through array
     questionIndex++;
+
+    // If no more questions, clear timer
+    if (questionIndex >= questionsObject.length) {
+        clearInterval(startTimer);
+    }
 }
