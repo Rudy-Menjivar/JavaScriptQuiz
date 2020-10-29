@@ -184,6 +184,12 @@ function endOfQuiz() {
         if (initials.enterInitials === "") {
             alert("Initials cannot be blank");
         } else {
+            // Declared userScore object with initials and score
+            var userScore = {
+                initials: initials,
+                score: finalScore
+            };
+            console.log(userScore);
             // set new submission
             localStorage.setItem("initials", JSON.stringify(initials));
         }
