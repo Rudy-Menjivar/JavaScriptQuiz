@@ -95,9 +95,13 @@ function loadNextQuestion(questionIndex) {
 function compare(event) {
     // declared element that triggered event
     var clickedEl = event.target;
+    // Create new divs for correct and wrong answers
+    var newDiv = document.createElement("div");
+    newDiv.setAttribute("id", "newDiv");
 
     // if correct multChoice is clicked, then..
     if (clickedEl.textContent == questionsObject[questionIndex].answer) {
-        alert("Correct!")
+        newDiv.textContent = "Correct! ";
+        console.log(newDiv)
     }
 }
