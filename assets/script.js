@@ -118,6 +118,7 @@ function compare(event) {
     if (questionIndex >= questionsObject.length) {
         endOfQuiz();
         clearInterval(startTimer);
+        newDiv.textContent = "Quiz has ended! " + "You got " + score + " out of " + questionsObject.length + " correct!";
     } else {
         loadNextQuestion(questionIndex);
     }
