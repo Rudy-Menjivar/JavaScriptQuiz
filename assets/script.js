@@ -39,7 +39,8 @@ var timerContent = document.querySelector("#timeLeft");
 var startTimer = document.querySelector("#startQuiz");
 
 // HTML DOM Var Objects
-var mainContent = document.querySelector("#quizContent")
+var mainContent = document.querySelector("#quizContent");
+var subContent = document.querySelector("#subContent");
 
 // Declared VARs to create new elements
 var newP = document.createElement("p");
@@ -140,7 +141,7 @@ if (timeLeft >=0) {
     var finalScore = score + timeLeft;
     clearInterval(startTimer);
     newP.textContent = "Your final score is: " + finalScore;
-    mainContent.appendChild(newP);
+    subContent.appendChild(newP);
     newP.style = ("font-weight: bold");
     }
 }
