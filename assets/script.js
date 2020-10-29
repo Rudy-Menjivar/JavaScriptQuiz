@@ -124,4 +124,5 @@ function compare(event) {
 
 function endOfQuiz() {
     mainContent.innerHTML = "";
+    timerContent.innerHTML = "";
 }
