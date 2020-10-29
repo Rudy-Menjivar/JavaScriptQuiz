@@ -104,5 +104,7 @@ function compare(event) {
         score++;
         newDiv.textContent = "Correct! The answer is " + questionsObject[questionIndex].answer;
         console.log(newDiv)
+    } else {
+        timeLeft = timeLeft - penalty;
     }
 }
