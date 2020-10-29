@@ -109,4 +109,6 @@ function compare(event) {
         newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
         console.log(newDiv)
     }
+    // questionIndex increments through array
+    questionIndex++;
 }
