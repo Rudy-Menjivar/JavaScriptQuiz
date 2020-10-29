@@ -45,9 +45,14 @@ var subContent = document.querySelector("#subContent");
 // Declared VARs to create new elements
 var newP = document.createElement("p");
 newP.setAttribute("id", "newP");
+
 var newButton = document.createElement("button");
+
 var newH2 = document.createElement("h2");
 newH2.setAttribute("id", "newH2");
+
+var newLabel = document.createElement("label");
+newLabel.setAttribute("id", "newLabel");
 
 // Begin timer with button click
 startTimer.addEventListener("click", function() {
