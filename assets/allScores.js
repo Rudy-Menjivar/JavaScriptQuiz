@@ -1,4 +1,5 @@
-
+// Global Variables
+var newOl = document.querySelector("#highScores");
 
 // create a Clear High Scores button
 
