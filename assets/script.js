@@ -162,6 +162,7 @@ function endOfQuiz() {
         subContent.appendChild(newP);
         newP.style = ("font-weight: bold");
     }
+}
     // newLabel created to prompt for initials
     newLabel.textContent = "Enter initials: "
     subContent.appendChild(newLabel);
@@ -191,7 +192,5 @@ function endOfQuiz() {
             };
             console.log(userScore);
             // set new submission
-            localStorage.setItem("initials", JSON.stringify(initials));
         }
     })
-}
