@@ -96,6 +96,9 @@ function nextQuestion() {
     var question = document.querySelector("#question");
     // Var gets current question from object
     question.textContent = loadNextQuestion.currentQuestion;
+
+    // Clears previous render
+    multChoice.innerHTML = "";
 }
 
 // Display questions and multiple choices to window
