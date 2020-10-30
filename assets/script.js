@@ -103,6 +103,10 @@ function nextQuestion() {
     // Loop over multipleChoices
     loadNextQuestion.multipleChoices.forEach(function(choice, i) {
 
+        // New button per choices
+        var choiceB = document.createElement("button");
+        choiceB.setAttribute("value", "choice");
+        
     })
 }
 
