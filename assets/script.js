@@ -153,6 +153,9 @@ function endOfQuiz() {
     // mainContent.appendChild(newH2);
     // newH2.textContent = "All done!";
 
+    // Unhide finalPage
+    finalPage.removeAttribute("style");
+
 // Calculates final score + leftTime & appends to mainContent
     if (timeLeft >=0) {
         var finalScore = score + timeLeft;
