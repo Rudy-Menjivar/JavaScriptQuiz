@@ -99,6 +99,11 @@ function nextQuestion() {
 
     // Clears previous render
     multChoice.innerHTML = "";
+
+    // Loop over multipleChoices
+    loadNextQuestion.multipleChoices.forEach(function(choice, i) {
+
+    })
 }
 
 // Display questions and multiple choices to window
