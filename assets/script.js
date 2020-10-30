@@ -105,7 +105,12 @@ function nextQuestion() {
 
         // New button per choices
         var choiceB = document.createElement("button");
-        choiceB.setAttribute("value", "choice");
+        choiceB.setAttribute("value", choice);
+
+        // Choices will render by ordered list, or numbered
+        choiceB.textContent = i + 1 + ". " + choice;
+        console.log(choice);
+
         
     })
 }
