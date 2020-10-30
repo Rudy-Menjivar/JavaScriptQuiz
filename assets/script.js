@@ -93,6 +93,7 @@ function nextQuestion() {
 
     // Render question within h2 tag
     var question = document.querySelector("#question");
+    question.textContent = loadNextQuestion.currentQuestion;
 }
 
 // Display questions and multiple choices to window
