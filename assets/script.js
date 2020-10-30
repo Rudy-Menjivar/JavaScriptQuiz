@@ -109,9 +109,9 @@ function nextQuestion() {
 
         // Choices will render by ordered list, or numbered
         choiceB.textContent = i + 1 + ". " + choice;
-        console.log(choice);
 
-        
+        // Render multiple choices on window
+        multChoice.appendChild(choiceB);
     })
 }
 
