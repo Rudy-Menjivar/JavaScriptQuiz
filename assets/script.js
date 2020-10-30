@@ -38,11 +38,12 @@ var viewHighScores = document.querySelector("#highScores");
 var timerContent = document.querySelector("#timeLeft");
 var startTimer = document.querySelector("#startQuiz");
 
-// HTML DOM Var Objects
+// VAR for HTML DOM
 var welcomePage = document.querySelector("#welcomePage");
 var mainContent = document.querySelector("#quizContent");
 var subContent = document.querySelector("#subContent");
 var finalPage = document.querySelector("#finalPage");
+var initials = document.querySelector("#initials");
 
 // Declared VARs to create new elements
 var newP = document.createElement("p");
