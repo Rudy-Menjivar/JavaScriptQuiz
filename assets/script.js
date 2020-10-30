@@ -124,12 +124,12 @@ function compare(event) {
     // if correct multChoice is clicked, then..
     if (clickedEl.textContent == questionsObject[questionIndex].answer) {
         score++;
-        newDiv.textContent = "Correct! The answer is " + questionsObject[questionIndex].answer;
-        newDiv.style = ("color: blue; font-weight: bold");
+        // newDiv.textContent = "Correct! The answer is " + questionsObject[questionIndex].answer;
+        // newDiv.style = ("color: blue; font-weight: bold");
     } else {
         timeLeft = timeLeft - penalty;
-        newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
-        newDiv.style = ("color: red; font-weight: bold");
+        // newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
+        // newDiv.style = ("color: red; font-weight: bold");
     }
     // questionIndex increments through array
     questionIndex++;
@@ -138,8 +138,8 @@ function compare(event) {
     if (questionIndex >= questionsObject.length) {
         endOfQuiz();
         clearInterval(startTimer);
-        newDiv.textContent = "Quiz has ended! " + "You got " + score + " out of " + questionsObject.length + " correct!";
-        newDiv.style = ("color: green; font-weight: bold");
+        // newDiv.textContent = "Quiz has ended! " + "You got " + score + " out of " + questionsObject.length + " correct!";
+        // newDiv.style = ("color: green; font-weight: bold");
     } else {
         loadNextQuestion(questionIndex);
     }
@@ -162,19 +162,19 @@ function endOfQuiz() {
     finalScore.textContent = score + timeLeft;
 
 // Calculates final score + leftTime & appends to mainContent
-    if (timeLeft >=0) {
-        var finalScore = score + timeLeft;
-        clearInterval(startTimer);
-        newP.textContent = "Your final score is: " + finalScore;
-        subContent.appendChild(newP);
-        newP.style = ("font-weight: bold");
-    } else {
-        var finalScore = score
-        clearInterval(startTimer);
-        newP.textContent = "Your final score is: " + score;
-        subContent.appendChild(newP);
-        newP.style = ("font-weight: bold");
-    }
+    // if (timeLeft >=0) {
+    //     var finalScore = score + timeLeft;
+    //     clearInterval(startTimer);
+    //     newP.textContent = "Your final score is: " + finalScore;
+    //     subContent.appendChild(newP);
+    //     newP.style = ("font-weight: bold");
+    // } else {
+    //     var finalScore = score
+    //     clearInterval(startTimer);
+    //     newP.textContent = "Your final score is: " + score;
+    //     subContent.appendChild(newP);
+    //     newP.style = ("font-weight: bold");
+    // }
 }
     // newLabel created to prompt for initials
     // newLabel.textContent = "Enter initials: "
