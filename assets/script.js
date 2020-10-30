@@ -40,8 +40,8 @@ var startTimer = document.querySelector("#startQuiz");
 
 // VAR for HTML DOM
 var welcomePage = document.querySelector("#welcomePage");
-var mainContent = document.querySelector("#quizContent");
-var subContent = document.querySelector("#subContent");
+// var mainContent = document.querySelector("#quizContent");
+// var subContent = document.querySelector("#subContent");
 var finalPage = document.querySelector("#finalPage");
 var initials = document.querySelector("#initials");
 
@@ -89,7 +89,11 @@ startTimer.addEventListener("click", function() {
 
 function nextQuestion() {
     // Get current question from questionsObject
-} loadNextQuestion = questionsObject[questionIndex];
+    loadNextQuestion = questionsObject[questionIndex];
+
+    // Render question within h2 tag
+    var question = document.querySelector("#question");
+}
 
 // Display questions and multiple choices to window
 // function loadNextQuestion(questionIndex) {
@@ -153,7 +157,7 @@ function nextQuestion() {
 // }
 // At end of quiz, clear mainContent and timerContent
 function endOfQuiz() {
-    mainContent.innerHTML = "";
+    // mainContent.innerHTML = "";
     timerContent.innerHTML = "";
     // Append & render All Done to the quizContent div 
     // mainContent.appendChild(newH2);
