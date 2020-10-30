@@ -64,6 +64,8 @@ newInput.setAttribute("id", "newInput");
 
 // Begin timer with button click
 startTimer.addEventListener("click", function() {
+    // Hide welcome page after click
+    welcomePage.style.visibility = "hidden";
     // Timer set to seconds with first function to run while time > 0
     startTimer = setInterval(function() {
     if (timeLeft > 0) {
