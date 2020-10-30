@@ -172,32 +172,32 @@ function endOfQuiz() {
     }
 }
     // newLabel created to prompt for initials
-    newLabel.textContent = "Enter initials: "
-    subContent.appendChild(newLabel);
+    // newLabel.textContent = "Enter initials: "
+    // subContent.appendChild(newLabel);
     // newInput created to enter initials
-    newInput.placeholder = "Your initials"
-    subContent.appendChild(newInput);
+    // newInput.placeholder = "Your initials"
+    // subContent.appendChild(newInput);
+
     // newButton added to for saving data
-    subContent.appendChild(newButton);
+    // subContent.appendChild(newButton);
 
     // added button click addEventListener 
-    newButton.addEventListener("click", function(event){
-        // preventDefault added to prevent a page refresh
-        event.preventDefault();
+    // newButton.addEventListener("click", function(event){
+
         // initals declared with newInput element
-        var initials = {
-            enterInitials: newInput.value.trim(),
-        }
+        // var initials = {
+        //     enterInitials: newInput.value.trim(),
+        // }
 
         // validate data to require input
-        if (initials.enterInitials === "") {
-            alert("Initials cannot be blank");
-        } else {
+        // if (initials.enterInitials === "") {
+        //     alert("Initials cannot be blank");
+        // } else {
             // Declared userScore object with initials and score
-            var userScore = {
-                initials: initials,
-                score: finalScore
-            };
-            console.log(userScore);
-        }
-    })
+    //         var userScore = {
+    //             initials: initials,
+    //             score: finalScore
+    //         };
+    //         console.log(userScore);
+    //     }
+    // })
