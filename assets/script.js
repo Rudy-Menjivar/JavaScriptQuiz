@@ -148,8 +148,8 @@ function endOfQuiz() {
     mainContent.innerHTML = "";
     timerContent.innerHTML = "";
     // Append & render All Done to the quizContent div 
-    mainContent.appendChild(newH2);
-    newH2.textContent = "All done!";
+    // mainContent.appendChild(newH2);
+    // newH2.textContent = "All done!";
 
 // Calculates final score + leftTime & appends to mainContent
     if (timeLeft >=0) {
