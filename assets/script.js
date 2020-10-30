@@ -83,69 +83,74 @@ startTimer.addEventListener("click", function() {
         endOfQuiz();
     }
     }, 1000)
-    loadNextQuestion(questionIndex);
+    nextQuestion();
+    // loadNextQuestion(questionIndex);
 });
 
+function nextQuestion() {
+    // Get current question from questionsObject
+} loadNextQuestion = questionsObject[questionIndex];
+
 // Display questions and multiple choices to window
-function loadNextQuestion(questionIndex) {
-    // Clear existing content for both questions & multiple choices
-    mainContent.innerHTML = "";
-    newP.innerHTML = "";
-    // For loop to loop through data in array
-    for (var i = 0; i < questionsObject.length; i++) {
-        // Loads current question
-        var loadNextQuestion = questionsObject[questionIndex].currentQuestion;
-        // Loads current multiple choice options
-        var multipleChoice = questionsObject[questionIndex].multipleChoices;
-        // mainContent will now render questions
-        mainContent.textContent = loadNextQuestion;
-    }
-        // Next multiple choice for each next question
-        multipleChoice.forEach(function(newItem) {
-            // multChoice presented on window
-            var listItem = document.createElement("dd");
-            // newItem contains text of multChoice
-            listItem.textContent = newItem;
-            mainContent.appendChild(newP);
-            newP.appendChild(listItem);
-            // Correct answer will be compared after click
-            listItem.addEventListener("click", (compare));
-        })
-}
+// function loadNextQuestion(questionIndex) {
+//     // Clear existing content for both questions & multiple choices
+//     mainContent.innerHTML = "";
+//     newP.innerHTML = "";
+//     // For loop to loop through data in array
+//     for (var i = 0; i < questionsObject.length; i++) {
+//         // Loads current question
+//         var loadNextQuestion = questionsObject[questionIndex].currentQuestion;
+//         // Loads current multiple choice options
+//         var multipleChoice = questionsObject[questionIndex].multipleChoices;
+//         // mainContent will now render questions
+//         mainContent.textContent = loadNextQuestion;
+//     }
+//         // Next multiple choice for each next question
+//         multipleChoice.forEach(function(newItem) {
+//             // multChoice presented on window
+//             var listItem = document.createElement("dd");
+//             // newItem contains text of multChoice
+//             listItem.textContent = newItem;
+//             mainContent.appendChild(newP);
+//             newP.appendChild(listItem);
+//             // Correct answer will be compared after click
+//             listItem.addEventListener("click", (compare));
+//         })
+// }
 
 // Compare multChoice clicked with answer
-function compare(event) {
-    // declared element that triggered event
-    var clickedEl = event.target;
-    // Create new divs for correct and wrong answers
-    var newDiv = document.createElement("div");
-    newDiv.setAttribute("id", "newDiv");
+// function compare(event) {
+//     // declared element that triggered event
+//     var clickedEl = event.target;
+//     // Create new divs for correct and wrong answers
+//     var newDiv = document.createElement("div");
+//     newDiv.setAttribute("id", "newDiv");
 
-    // if correct multChoice is clicked, then..
-    if (clickedEl.textContent == questionsObject[questionIndex].answer) {
-        score++;
-        // newDiv.textContent = "Correct! The answer is " + questionsObject[questionIndex].answer;
-        // newDiv.style = ("color: blue; font-weight: bold");
-    } else {
-        timeLeft = timeLeft - penalty;
-        // newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
-        // newDiv.style = ("color: red; font-weight: bold");
-    }
-    // questionIndex increments through array
-    questionIndex++;
+//     // if correct multChoice is clicked, then..
+//     if (clickedEl.textContent == questionsObject[questionIndex].answer) {
+//         score++;
+//         // newDiv.textContent = "Correct! The answer is " + questionsObject[questionIndex].answer;
+//         // newDiv.style = ("color: blue; font-weight: bold");
+//     } else {
+//         timeLeft = timeLeft - penalty;
+//         // newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
+//         // newDiv.style = ("color: red; font-weight: bold");
+//     }
+//     // questionIndex increments through array
+//     questionIndex++;
 
-    // If no more questions, end quiz, clear timer & report score
-    if (questionIndex >= questionsObject.length) {
-        endOfQuiz();
-        clearInterval(startTimer);
-        // newDiv.textContent = "Quiz has ended! " + "You got " + score + " out of " + questionsObject.length + " correct!";
-        // newDiv.style = ("color: green; font-weight: bold");
-    } else {
-        loadNextQuestion(questionIndex);
-    }
-    // Append newDiv textContent to the quizContent div
-    mainContent.appendChild(newDiv);
-}
+//     // If no more questions, end quiz, clear timer & report score
+//     if (questionIndex >= questionsObject.length) {
+//         endOfQuiz();
+//         clearInterval(startTimer);
+//         // newDiv.textContent = "Quiz has ended! " + "You got " + score + " out of " + questionsObject.length + " correct!";
+//         // newDiv.style = ("color: green; font-weight: bold");
+//     } else {
+//         loadNextQuestion(questionIndex);
+//     }
+//     // Append newDiv textContent to the quizContent div
+//     mainContent.appendChild(newDiv);
+// }
 // At end of quiz, clear mainContent and timerContent
 function endOfQuiz() {
     mainContent.innerHTML = "";
