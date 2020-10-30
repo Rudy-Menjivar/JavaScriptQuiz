@@ -42,6 +42,7 @@ var startTimer = document.querySelector("#startQuiz");
 var welcomePage = document.querySelector("#welcomePage");
 var mainContent = document.querySelector("#quizContent");
 var subContent = document.querySelector("#subContent");
+var finalPage = document.querySelector("#finalPage");
 
 // Declared VARs to create new elements
 var newP = document.createElement("p");
