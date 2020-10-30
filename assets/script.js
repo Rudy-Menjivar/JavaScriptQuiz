@@ -156,6 +156,10 @@ function endOfQuiz() {
     // Unhide finalPage
     finalPage.removeAttribute("style");
 
+    // Render finalScore to span element
+    var finalScore = document.querySelector("#finalScore");
+    finalScore.textContent = score + timeLeft;
+
 // Calculates final score + leftTime & appends to mainContent
     if (timeLeft >=0) {
         var finalScore = score + timeLeft;
