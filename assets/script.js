@@ -80,6 +80,7 @@ startTimer.addEventListener("click", function() {
         // Change time to this text
         timerContent.textContent = "Time ran out on you!";
         timerContent.style = ("color: red; font-weight: bold");
+        endOfQuiz();
     }
     }, 1000)
     loadNextQuestion(questionIndex);
