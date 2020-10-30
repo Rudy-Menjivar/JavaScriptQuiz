@@ -39,6 +39,7 @@ var timerContent = document.querySelector("#timeLeft");
 var startTimer = document.querySelector("#startQuiz");
 
 // HTML DOM Var Objects
+var welcomePage = document.querySelector("#welcomePage");
 var mainContent = document.querySelector("#quizContent");
 var subContent = document.querySelector("#subContent");
 
@@ -191,6 +192,5 @@ function endOfQuiz() {
                 score: finalScore
             };
             console.log(userScore);
-            // set new submission
         }
     })
