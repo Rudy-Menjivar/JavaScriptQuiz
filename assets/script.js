@@ -40,10 +40,11 @@ var startTimer = document.querySelector("#startQuiz");
 
 // VAR for HTML DOM
 var welcomePage = document.querySelector("#welcomePage");
-// var mainContent = document.querySelector("#quizContent");
-// var subContent = document.querySelector("#subContent");
+var multChoice = document.querySelector("#multChoice");
 var finalPage = document.querySelector("#finalPage");
 var initials = document.querySelector("#initials");
+// var mainContent = document.querySelector("#quizContent");
+// var subContent = document.querySelector("#subContent");
 
 // Declared VARs to create new elements
 var newP = document.createElement("p");
@@ -93,6 +94,7 @@ function nextQuestion() {
 
     // Render question within h2 tag
     var question = document.querySelector("#question");
+    // Var gets current question from object
     question.textContent = loadNextQuestion.currentQuestion;
 }
 
