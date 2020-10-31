@@ -121,6 +121,14 @@ function nextQuestion() {
 function optionClick() {
     // If wrong answer
     if (this.value !== questionsObject[questionIndex].answer) {
+        
+        // Penalize time with every wrong answer
+        timeLeft = timeLeft - penalty
+
+        // But penalized time cannot be less than zero
+        if (timeleft < 0) {
+            timeLeft = 0;
+        }
 
     }
 }
