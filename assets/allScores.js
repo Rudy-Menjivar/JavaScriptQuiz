@@ -13,6 +13,12 @@ function renderHighScores() {
         return b.score - a.score;
     });
 
+    highscores.forEach(function(score) {
+        // li tag will list last score with initials
+        newLi.textContent = score.initials + " - " + score.score;
+        
+        
+    })
 }
 
 
