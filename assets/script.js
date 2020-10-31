@@ -186,6 +186,9 @@ function saveScore() {
     // window highscores redirect
     window.location.href = "highscores.html";
     }
+    else {
+        alert("Enter initials to continue")
+    }
 }
 // Submit score with enter key function
 function key13(event) {
