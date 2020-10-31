@@ -24,4 +24,5 @@ function renderHighScores() {
 // Run renderHighScores when page loads
 renderHighScores();
 
-// create a Clear High Scores button
+// Clear High Scores with onclick (and function)
+document.querySelector("#clearHighScores").onclick = clearHighScores;
