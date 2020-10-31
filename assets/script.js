@@ -112,7 +112,17 @@ function nextQuestion() {
 
         // Render multiple choices on window
         multChoice.appendChild(choiceB);
+
+        // Event listener on every choice clicked
+        choiceB.onclick = optionClick;
     })
+}
+
+function optionClick() {
+    // If wrong answer
+    if (this.value !== questionsObject[questionIndex].answer) {
+
+    }
 }
 
 // Display questions and multiple choices to window
