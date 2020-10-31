@@ -152,6 +152,10 @@ function optionClick() {
     }
 }
 
+function saveScore() {
+    // get data from initialsInput id
+    var initials = initialsInput.value.trim();
+}
 // Display questions and multiple choices to window
 // function loadNextQuestion(questionIndex) {
 //     // Clear existing content for both questions & multiple choices
