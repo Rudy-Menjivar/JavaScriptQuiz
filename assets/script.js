@@ -141,6 +141,8 @@ function optionClick() {
     setTimeout(function() {
         feedback.setAttribute("class", "feedback hide");
     }, 1000);
+    // Render next question
+    questionIndex++;
 }
 
 // Display questions and multiple choices to window
