@@ -41,6 +41,7 @@ var startTimer = document.querySelector("#startQuiz");
 // VAR for HTML DOM
 var welcomePage = document.querySelector("#welcomePage");
 var multChoice = document.querySelector("#multChoice");
+var feedback = document.querySelector("#feedback");
 var finalPage = document.querySelector("#finalPage");
 var initials = document.querySelector("#initials");
 // var mainContent = document.querySelector("#quizContent");
@@ -126,10 +127,11 @@ function optionClick() {
         timeLeft = timeLeft - penalty
 
         // But penalized time cannot be less than zero
-        if (timeleft < 0) {
+        if (timeLeft < 0) {
             timeLeft = 0;
         }
-
+        // Render text on wrong answer clicks
+        feedback.textContent = "Wrong!";
     }
 }
 
