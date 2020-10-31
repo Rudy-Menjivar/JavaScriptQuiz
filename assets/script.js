@@ -152,13 +152,36 @@ function optionClick() {
     }
 }
 
+function endOfQuiz() {
+    // mainContent.innerHTML = "";
+    timerContent.innerHTML = "";
+    // Stop timer
+    clearInterval(startTimer);
+    // Append & render All Done to the quizContent div 
+    // mainContent.appendChild(newH2);
+    // newH2.textContent = "All done!";
+
+    // Unhide finalPage
+    finalPage.removeAttribute("style");
+
+    // Render finalScore to span element
+    var finalScore = document.querySelector("#finalScore");
+    finalScore.textContent = score + timeLeft;
+
+    // Hide questionContent div and feedback div
+    quizContent.style.visibility = "hidden";
+    feedback.style.visibility = "hidden";
+}
+
 function saveScore() {
     // get data from initialsInput id
     var initials = initialsInput.value.trim();
 
     // If statement, if initials aren't empty
     if (initials !== "") {
-        console.log(initials);
+    // Get saved scores, if none, set to empty array
+    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    
     }
 }
 // Display questions and multiple choices to window
@@ -222,26 +245,7 @@ function saveScore() {
 //     mainContent.appendChild(newDiv);
 // }
 // At end of quiz, clear mainContent and timerContent
-function endOfQuiz() {
-    // mainContent.innerHTML = "";
-    timerContent.innerHTML = "";
-    // Stop timer
-    clearInterval(startTimer);
-    // Append & render All Done to the quizContent div 
-    // mainContent.appendChild(newH2);
-    // newH2.textContent = "All done!";
 
-    // Unhide finalPage
-    finalPage.removeAttribute("style");
-
-    // Render finalScore to span element
-    var finalScore = document.querySelector("#finalScore");
-    finalScore.textContent = score + timeLeft;
-
-    // Hide questionContent div and feedback div
-    quizContent.style.visibility = "hidden";
-    feedback.style.visibility = "hidden";
-}
 
 
 // Calculates final score + leftTime & appends to mainContent
