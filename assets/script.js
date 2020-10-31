@@ -136,6 +136,11 @@ function optionClick() {
         // Render text on correct answers
         feedback.textContent = "Correct!";
     }
+    // Pause 1 second to display feedback text
+    feedback.setAttribute("class", "feedback");
+    setTimeout(function() {
+        feedback.setAttribute("class", "feedback hide");
+    }, 1000);
 }
 
 // Display questions and multiple choices to window
