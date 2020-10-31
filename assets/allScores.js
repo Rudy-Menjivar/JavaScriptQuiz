@@ -17,7 +17,8 @@ function renderHighScores() {
         // li tag will list last score with initials
         newLi.textContent = score.initials + " - " + score.score;
         
-        
+        // Append new li tag to OL highScores
+        newOl.appendChild(newLi);
     })
 }
 
