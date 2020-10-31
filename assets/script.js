@@ -193,3 +193,6 @@ function key13(event) {
         saveScore();
     }
 }
+
+// Save score if submit button is clicked
+submitButton.onclick = saveScore;
