@@ -21,6 +21,11 @@ function renderHighScores() {
         newOl.appendChild(newLi);
     })
 }
+// Clear high scores with function
+function clearHighScores() {
+    window.localStorage.removeItem("highscores");
+    window.location.reload();
+}
 // Run renderHighScores when page loads
 renderHighScores();
 
