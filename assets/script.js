@@ -155,6 +155,11 @@ function optionClick() {
 function saveScore() {
     // get data from initialsInput id
     var initials = initialsInput.value.trim();
+
+    // If statement, if initials aren't empty
+    if (initials !== "") {
+        console.log(initials);
+    }
 }
 // Display questions and multiple choices to window
 // function loadNextQuestion(questionIndex) {
