@@ -229,6 +229,10 @@ function endOfQuiz() {
     var finalScore = document.querySelector("#finalScore");
     finalScore.textContent = score + timeLeft;
 
+    // Hide questionContent div and feedback div
+    quizContent.style.visibility = "hidden";
+    feedback.style.visibility = "hidden";
+
 // Calculates final score + leftTime & appends to mainContent
     // if (timeLeft >=0) {
     //     var finalScore = score + timeLeft;
