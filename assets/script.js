@@ -132,6 +132,9 @@ function optionClick() {
         }
         // Render text on wrong answer clicks
         feedback.textContent = "Wrong!";
+    } else {
+        // Render text on correct answers
+        feedback.textContent = "Correct!";
     }
 }
 
