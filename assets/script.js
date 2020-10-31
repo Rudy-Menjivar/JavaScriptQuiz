@@ -143,6 +143,13 @@ function optionClick() {
     }, 1000);
     // Render next question
     questionIndex++;
+
+    // If statement to load next question or end quiz
+    if (questionIndex === questionsObject.length) {
+        endOfQuiz();
+    } else {
+        nextQuestion();
+    }
 }
 
 // Display questions and multiple choices to window
@@ -209,6 +216,8 @@ function optionClick() {
 function endOfQuiz() {
     // mainContent.innerHTML = "";
     timerContent.innerHTML = "";
+    // Stop timer
+    clearInterval(startTimer);
     // Append & render All Done to the quizContent div 
     // mainContent.appendChild(newH2);
     // newH2.textContent = "All done!";
