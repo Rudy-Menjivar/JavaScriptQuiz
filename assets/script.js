@@ -188,6 +188,10 @@ function saveScore() {
         initials: initials
     };
     } console.log(initials);
+
+    // Save input data to localStorage
+    highscores.push(newScore);
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
 }
 // Display questions and multiple choices to window
 // function loadNextQuestion(questionIndex) {
