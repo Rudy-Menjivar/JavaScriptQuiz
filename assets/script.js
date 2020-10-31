@@ -192,6 +192,9 @@ function saveScore() {
     // Save input data to localStorage
     highscores.push(newScore);
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+    // window highscores redirect
+    window.location.href = "highscores.html";
 }
 // Display questions and multiple choices to window
 // function loadNextQuestion(questionIndex) {
