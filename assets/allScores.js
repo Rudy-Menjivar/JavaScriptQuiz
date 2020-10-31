@@ -8,6 +8,11 @@ function renderHighScores() {
     // get scores from local storage or an empty array
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
+    // sore highscores
+    highscores.sort(function(a, b) {
+        return b.score - a.score;
+    });
+
 }
 
 
