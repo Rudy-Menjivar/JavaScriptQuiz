@@ -187,14 +187,9 @@ function saveScore() {
     window.location.href = "highscores.html";
     }
 }
-
+// Submit score with enter key function
 function key13(event) {
     if (event.key === "Enter") {
         saveScore();
     }
 }
-
-//
-submitButton.onclick = saveScore;
-
-initialsInput.onkeyup = key13;
