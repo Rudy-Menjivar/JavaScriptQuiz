@@ -196,3 +196,6 @@ function key13(event) {
 
 // Save score if submit button is clicked
 submitButton.onclick = saveScore;
+
+// Listen for enter key, so enter function fires
+initialsInput.onkeyup = key13;
