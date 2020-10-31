@@ -44,18 +44,10 @@ var multChoice = document.querySelector("#multChoice");
 var feedback = document.querySelector("#feedback");
 var finalPage = document.querySelector("#finalPage");
 var initialsInput = document.querySelector("#initialsInput");
-// var mainContent = document.querySelector("#quizContent");
-// var subContent = document.querySelector("#subContent");
 
 // Declared VARs to create new elements
 var newP = document.createElement("p");
 newP.setAttribute("id", "newP");
-
-var newButton = document.createElement("button");
-newButton.setAttribute("type", "submit");
-newButton.setAttribute("id", "newButton");
-newButton.setAttribute("class", "btn btn-primary");
-newButton.textContent = "Submit";
 
 var newH2 = document.createElement("h2");
 newH2.setAttribute("id", "newH2");
@@ -68,8 +60,8 @@ newInput.setAttribute("id", "newInput");
 
 // Begin timer with button click
 startTimer.addEventListener("click", function() {
-    // Hide welcome page after click
-    welcomePage.style.visibility = "hidden";
+    // Hide entire elements for welcome page after click
+    welcomePage.style.display = "none";
     // Timer set to seconds with first function to run while time > 0
     startTimer = setInterval(function() {
     if (timeLeft > 0) {
@@ -157,9 +149,6 @@ function endOfQuiz() {
     timerContent.innerHTML = "";
     // Stop timer
     clearInterval(startTimer);
-    // Append & render All Done to the quizContent div 
-    // mainContent.appendChild(newH2);
-    // newH2.textContent = "All done!";
 
     // Unhide finalPage
     finalPage.removeAttribute("style");
@@ -187,7 +176,6 @@ function saveScore() {
         score: lastScore,
         initials: initials
     };
-    } console.log(initials);
 
     // Save input data to localStorage
     highscores.push(newScore);
@@ -195,113 +183,5 @@ function saveScore() {
 
     // window highscores redirect
     window.location.href = "highscores.html";
+    }
 }
-// Display questions and multiple choices to window
-// function loadNextQuestion(questionIndex) {
-//     // Clear existing content for both questions & multiple choices
-//     mainContent.innerHTML = "";
-//     newP.innerHTML = "";
-//     // For loop to loop through data in array
-//     for (var i = 0; i < questionsObject.length; i++) {
-//         // Loads current question
-//         var loadNextQuestion = questionsObject[questionIndex].currentQuestion;
-//         // Loads current multiple choice options
-//         var multipleChoice = questionsObject[questionIndex].multipleChoices;
-//         // mainContent will now render questions
-//         mainContent.textContent = loadNextQuestion;
-//     }
-//         // Next multiple choice for each next question
-//         multipleChoice.forEach(function(newItem) {
-//             // multChoice presented on window
-//             var listItem = document.createElement("dd");
-//             // newItem contains text of multChoice
-//             listItem.textContent = newItem;
-//             mainContent.appendChild(newP);
-//             newP.appendChild(listItem);
-//             // Correct answer will be compared after click
-//             listItem.addEventListener("click", (compare));
-//         })
-// }
-
-// Compare multChoice clicked with answer
-// function compare(event) {
-//     // declared element that triggered event
-//     var clickedEl = event.target;
-//     // Create new divs for correct and wrong answers
-//     var newDiv = document.createElement("div");
-//     newDiv.setAttribute("id", "newDiv");
-
-//     // if correct multChoice is clicked, then..
-//     if (clickedEl.textContent == questionsObject[questionIndex].answer) {
-//         score++;
-//         // newDiv.textContent = "Correct! The answer is " + questionsObject[questionIndex].answer;
-//         // newDiv.style = ("color: blue; font-weight: bold");
-//     } else {
-//         timeLeft = timeLeft - penalty;
-//         // newDiv.textContent = "Wrong! The correct answer is " + questionsObject[questionIndex].answer;
-//         // newDiv.style = ("color: red; font-weight: bold");
-//     }
-//     // questionIndex increments through array
-//     questionIndex++;
-
-//     // If no more questions, end quiz, clear timer & report score
-//     if (questionIndex >= questionsObject.length) {
-//         endOfQuiz();
-//         clearInterval(startTimer);
-//         // newDiv.textContent = "Quiz has ended! " + "You got " + score + " out of " + questionsObject.length + " correct!";
-//         // newDiv.style = ("color: green; font-weight: bold");
-//     } else {
-//         loadNextQuestion(questionIndex);
-//     }
-//     // Append newDiv textContent to the quizContent div
-//     mainContent.appendChild(newDiv);
-// }
-// At end of quiz, clear mainContent and timerContent
-
-
-
-// Calculates final score + leftTime & appends to mainContent
-    // if (timeLeft >=0) {
-    //     var finalScore = score + timeLeft;
-    //     clearInterval(startTimer);
-    //     newP.textContent = "Your final score is: " + finalScore;
-    //     subContent.appendChild(newP);
-    //     newP.style = ("font-weight: bold");
-    // } else {
-    //     var finalScore = score
-    //     clearInterval(startTimer);
-    //     newP.textContent = "Your final score is: " + score;
-    //     subContent.appendChild(newP);
-    //     newP.style = ("font-weight: bold");
-    // }
-// }
-    // newLabel created to prompt for initials
-    // newLabel.textContent = "Enter initials: "
-    // subContent.appendChild(newLabel);
-    // newInput created to enter initials
-    // newInput.placeholder = "Your initials"
-    // subContent.appendChild(newInput);
-
-    // newButton added to for saving data
-    // subContent.appendChild(newButton);
-
-    // added button click addEventListener 
-    // newButton.addEventListener("click", function(event){
-
-        // initals declared with newInput element
-        // var initials = {
-        //     enterInitials: newInput.value.trim(),
-        // }
-
-        // validate data to require input
-        // if (initials.enterInitials === "") {
-        //     alert("Initials cannot be blank");
-        // } else {
-            // Declared userScore object with initials and score
-    //         var userScore = {
-    //             initials: initials,
-    //             score: finalScore
-    //         };
-    //         console.log(userScore);
-    //     }
-    //
