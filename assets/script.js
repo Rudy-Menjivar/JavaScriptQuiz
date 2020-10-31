@@ -181,8 +181,13 @@ function saveScore() {
     if (initials !== "") {
     // Get saved scores, if none, set to empty array
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-    
-    }
+
+    // New score object for score and initials
+    var newScore = {
+        score: lastScore,
+        initials: initials
+    };
+    } console.log(initials);
 }
 // Display questions and multiple choices to window
 // function loadNextQuestion(questionIndex) {
