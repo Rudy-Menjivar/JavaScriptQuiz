@@ -157,9 +157,9 @@ function endOfQuiz() {
     var finalScore = document.querySelector("#finalScore");
     finalScore.textContent = score + timeLeft;
 
-    // Hide questionContent div and feedback div
-    quizContent.style.visibility = "hidden";
-    feedback.style.visibility = "hidden";
+    // Hide all elements for questionContent div and feedback div
+    quizContent.style.display = "none";
+    feedback.style.display = "none";
 }
 
 function saveScore() {
