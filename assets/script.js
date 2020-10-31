@@ -43,7 +43,7 @@ var welcomePage = document.querySelector("#welcomePage");
 var multChoice = document.querySelector("#multChoice");
 var feedback = document.querySelector("#feedback");
 var finalPage = document.querySelector("#finalPage");
-var initials = document.querySelector("#initials");
+var initialsInput = document.querySelector("#initialsInput");
 // var mainContent = document.querySelector("#quizContent");
 // var subContent = document.querySelector("#subContent");
 
@@ -232,6 +232,8 @@ function endOfQuiz() {
     // Hide questionContent div and feedback div
     quizContent.style.visibility = "hidden";
     feedback.style.visibility = "hidden";
+}
+
 
 // Calculates final score + leftTime & appends to mainContent
     // if (timeLeft >=0) {
@@ -247,7 +249,7 @@ function endOfQuiz() {
     //     subContent.appendChild(newP);
     //     newP.style = ("font-weight: bold");
     // }
-}
+// }
     // newLabel created to prompt for initials
     // newLabel.textContent = "Enter initials: "
     // subContent.appendChild(newLabel);
@@ -277,4 +279,4 @@ function endOfQuiz() {
     //         };
     //         console.log(userScore);
     //     }
-    // })
+    //
