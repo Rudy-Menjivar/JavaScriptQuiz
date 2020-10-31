@@ -21,6 +21,7 @@ function renderHighScores() {
         newOl.appendChild(newLi);
     })
 }
-
+// Run renderHighScores when page loads
+renderHighScores();
 
 // create a Clear High Scores button
