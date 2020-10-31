@@ -165,6 +165,8 @@ function endOfQuiz() {
 function saveScore() {
     // get data from initialsInput id
     var initials = initialsInput.value.trim();
+    // Score will be higher if there's more time left + correct answers
+    var finalScore = timeLeft + score;
 
     // If statement, if initials aren't empty
     if (initials !== "") {
@@ -173,7 +175,7 @@ function saveScore() {
 
     // New score object for score and initials
     var newScore = {
-        score: lastScore,
+        score: finalScore,
         initials: initials
     };
 
@@ -185,3 +187,14 @@ function saveScore() {
     window.location.href = "highscores.html";
     }
 }
+
+function key13(event) {
+    if (event.key === "Enter") {
+        saveScore();
+    }
+}
+
+//
+submitButton.onclick = saveScore;
+
+initialsInput.onkeyup = key13;
