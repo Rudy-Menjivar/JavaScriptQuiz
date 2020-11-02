@@ -130,9 +130,10 @@ function optionClick() {
         feedback.textContent = "Correct!";
     }
     // Pause 1 second to display feedback text
-    feedback.setAttribute("class", "feedback");
+    // feedback.setAttribute("class", "feedback");
+    feedback.removeAttribute("style");
     setTimeout(function() {
-        feedback.setAttribute("class", "feedback hide");
+        feedback.style.display = "none";
     }, 1000);
     // Render next question
     questionIndex++;
