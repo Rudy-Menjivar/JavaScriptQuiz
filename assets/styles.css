@@ -15,6 +15,15 @@ li:nth-child(odd) {
 a {
     color: rgb(112, 67, 112);
     transition: color 0.2s;
+    color: white;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
 }
 
 button {
@@ -27,7 +36,6 @@ button {
     padding: 4px 15px;
     text-align: left;
     text-decoration: none;
-    border-radius: 4px;
 }
 
 button:hover {
@@ -37,7 +45,7 @@ button:hover {
 .choiceB {
     display: block;
     margin: 10px 20px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 #submitButton {
@@ -49,5 +57,13 @@ button:hover {
 }
 
 #goBack {
+    border-radius: 4px;
+}
+
+#startQuiz {
+    border-radius: 4px;
+}
+
+#highScores {
     border-radius: 4px;
 }
