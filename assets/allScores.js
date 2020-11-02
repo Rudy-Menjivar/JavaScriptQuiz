@@ -1,8 +1,3 @@
-// Global Variables
-var newOl = document.querySelector("#highScores");
-var newLi = document.createElement("li");
-
-
 // create elements to store and add new scores
 function renderHighScores() {
     // get scores from local storage or an empty array
@@ -15,19 +10,22 @@ function renderHighScores() {
 
     highscores.forEach(function(score) {
         // li tag will list last score with initials
+        var newLi = document.createElement("li");
         newLi.textContent = score.initials + " - " + score.score;
         
         // Append new li tag to OL highScores
+        var newOl = document.querySelector("#highScores");
         newOl.appendChild(newLi);
-    })
+    });
 }
 // Clear high scores with function
 function clearHighScores() {
     window.localStorage.removeItem("highscores");
     window.location.reload();
 }
-// Run renderHighScores when page loads
-renderHighScores();
 
 // Clear High Scores with onclick (and function)
 document.querySelector("#clearHighScores").onclick = clearHighScores;
+
+// Run renderHighScores when page loads
+renderHighScores();
