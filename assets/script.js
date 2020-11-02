@@ -130,7 +130,6 @@ function optionClick() {
         feedback.textContent = "Correct!";
     }
     // Pause 1 second to display feedback text
-    // feedback.setAttribute("class", "feedback");
     feedback.removeAttribute("style");
     setTimeout(function() {
         feedback.style.display = "none";
@@ -147,7 +146,6 @@ function optionClick() {
 }
 
 function endOfQuiz() {
-    // mainContent.innerHTML = "";
     timerContent.innerHTML = "";
     // Stop timer
     clearInterval(startTimer);
@@ -161,7 +159,10 @@ function endOfQuiz() {
 
     // Hide all elements for questionContent div and feedback div
     quizContent.style.display = "none";
-    feedback.style.display = "none";
+    feedback.removeAttribute("style");
+    setTimeout(function() {
+        feedback.style.display = "none";
+    }, 1000);
 }
 
 function saveScore() {
@@ -198,9 +199,7 @@ function key13(event) {
         saveScore();
     }
 }
-
 // Save score if submit button is clicked
 submitButton.onclick = saveScore;
-
 // Listen for enter key, so enter function fires
 initialsInput.onkeyup = key13;
