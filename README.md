@@ -27,3 +27,10 @@ Once the game is over
 The following animation demonstrates the application functionality:
 
 ![code-quiz](./assets/web-apis-demo.gif)
+
+## GitHub IO
+
+Included are the links to access this repository. Feel free to download files for your review.
+
+- [GitHub Page](https://rudy-menjivar.github.io/JavaScriptQuiz/)
+- [GitHub Repository](https://github.com/Rudy-Menjivar/JavaScriptQuiz)
