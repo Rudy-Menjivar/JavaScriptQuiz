@@ -1,26 +1,36 @@
 # JavaScript Quiz
 
-## Task
+## Contents
+1. [Description](#description)
+2. [Design](#design)
+3. [GitHub Links](#github)
+4. [Contact Info](#contact-information)
+## Description
 
-Create a coding assessment that has a timer with dynamically updated HTML and CSS powered by JavaScript code. It must include multiple-choice questions and keep track of the score. Once completed, the high scores will be displayed.
+This assessment is powered by JavaScript code, with dynamically updated HTML and CSS. It also displays a timer that begins with a click, and renders multiple-choice questions. Score is tracked and once completed, the high scores along with entered initial are rendered.
 
-## Requirements
+## Design
 
-To begin taking this coding quiz:
-- The user will click on the start button
+To begin taking this coding quiz
+- The client will click on the start button
 - A timer will begin and first question will be presented
 
-When a question is answered correctly:
+When a question is answered correctly
 - The next question will be presented
+- A "Correct!" message renders
 
-When a question is answered incorrectly:
+When a question is answered incorrectly
 - Time will be deducted from the timer
+- A "Wrong!" message renders
 
 When all questions are answered or the timer reaches 0
 - The game is over
+- The final score is totalled and presented
 
 Once the game is over
-- User will be able to save their initials and score
+- Client is able to save their score afer entering their initials
+- Once submit is clicked, the score is saved as long as initials are present
+- A message is rendered, if no initials are entered
 
 ## Mock-Up Example
 
@@ -28,11 +38,14 @@ The following animation demonstrates the application functionality:
 
 ![code-quiz](./assets/web-apis-demo.gif)
 
-## GitHub IO
-
-Included are the links to access this repository. Feel free to download files for your review.
-
-- [GitHub Page](https://rudy-menjivar.github.io/JavaScriptQuiz/)
+## GitHub
+- [Deployed Version](https://rudy-menjivar.github.io/JavaScriptQuiz/)
 - [GitHub Repository](https://github.com/Rudy-Menjivar/JavaScriptQuiz)
 
-# Test
+## Technologies Used
+* [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [CSS](https://developer.mozilla.org/en-US/docs/Glossary/CSS)
+
+## Contact Information
+[LinkedIn](https://www.linkedin.com/in/rudy-menjivar-)
