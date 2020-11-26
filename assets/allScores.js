@@ -14,8 +14,8 @@ function renderHighScores() {
         newLi.textContent = score.initials + " - " + score.score;
         
         // Append new li tag to OL highScores
-        var newOl = document.querySelector("#highScores");
-        newOl.appendChild(newLi);
+        var topScores = document.querySelector("#highScores");
+        topScores.appendChild(newLi);
     });
 }
 // Clear high scores with function
