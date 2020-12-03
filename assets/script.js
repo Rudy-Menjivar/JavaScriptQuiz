@@ -30,11 +30,10 @@ var questionsObject = [
 // Starting score, starting time, penalty and question index
 var score = 0;
 var questionIndex = 0;
-var timeLeft = 30;
-var penalty = 10;
+var timeLeft = questionsObject.length * 10;
+var penalty = 15;
 
 // Global variables
-var viewHighScores = document.querySelector("#highScores");
 var timerContent = document.querySelector("#timeLeft");
 var startTimer = document.querySelector("#startQuiz");
 
@@ -45,23 +44,9 @@ var feedback = document.querySelector("#feedback");
 var finalPage = document.querySelector("#finalPage");
 var initialsInput = document.querySelector("#initialsInput");
 
-// Declared VARs to create new elements
-var newP = document.createElement("p");
-newP.setAttribute("id", "newP");
-
-var newH2 = document.createElement("h2");
-newH2.setAttribute("id", "newH2");
-
-var newLabel = document.createElement("label");
-newLabel.setAttribute("id", "newLabel");
-
-var newInput = document.createElement("input");
-newInput.setAttribute("id", "newInput");
-
 // Begin timer with button click
 startTimer.addEventListener("click", function() {
-    // Hide entire elements for welcome page after click
-    welcomePage.style.display = "none";
+    welcomePage.style.display = "none"; // Hide entire elements for welcome page after click
     // Timer set to seconds with first function to run while time > 0
     startTimer = setInterval(function() {
     if (timeLeft > 0) {
@@ -69,99 +54,74 @@ startTimer.addEventListener("click", function() {
         timerContent.textContent = "Time: " + timeLeft;
         timerContent.style = ("font-weight: bold");
     } else {
-        // Clear timer set by setInterval
-        clearInterval(startTimer);
-        // Change time to this text
-        timerContent.textContent = "Time ran out on you!";
-        timerContent.style = ("color: red; font-weight: bold");
-        endOfQuiz();
+        timeRanOut();
     }
     }, 1000)
-    nextQuestion();
-    // loadNextQuestion(questionIndex);
+    nextQuestion(); // loadNextQuestion(questionIndex);
 });
 
 function nextQuestion() {
-    // Get current question from questionsObject
-    loadNextQuestion = questionsObject[questionIndex];
-
-    // Render question within h2 tag
-    var question = document.querySelector("#question");
-    // Var gets current question from object
-    question.textContent = loadNextQuestion.currentQuestion;
-
-    // Clears previous render
-    multChoice.innerHTML = "";
-
+    loadNextQuestion = questionsObject[questionIndex]; // Get current question from questionsObject
+    var question = document.querySelector("#question"); // Render question within h3 tag
+    question.textContent = loadNextQuestion.currentQuestion; // Get next question from object
+    multChoice.innerHTML = ""; // Clears previous render
     // Loop over multipleChoices
     loadNextQuestion.multipleChoices.forEach(function(choice, i) {
-
         // New button per choices
         var choiceB = document.createElement("button");
         choiceB.setAttribute("value", choice);
         choiceB.setAttribute("class", "choiceB");
-
         // Choices will render by ordered list, or numbered
         choiceB.textContent = i + 1 + ". " + choice;
-
-        // Render multiple choices on window
-        multChoice.appendChild(choiceB);
-
-        // Event listener on every choice clicked
-        choiceB.onclick = optionClick;
+        multChoice.appendChild(choiceB); // Append multiple choices to buttons
+        choiceB.onclick = optionClick; // Event listener on every choice clicked
     })
 }
 
 function optionClick() {
-    // If wrong answer
+    // If wrong answer, then penalize time left
     if (this.value !== questionsObject[questionIndex].answer) {
-        
-        // Penalize time with every wrong answer
-        timeLeft = timeLeft - penalty
-
-        // But penalized time cannot be less than zero
+        timeLeft = timeLeft - penalty // Penalize time with every wrong answer
+        // Penalized time cannot be less than zero
         if (timeLeft < 0) {
             timeLeft = 0;
         }
-        // Render text on wrong answer clicks
-        feedback.textContent = "Wrong!";
+        feedback.textContent = "Wrong!"; // Render text on wrong answer clicks
     } else {
-        // Render text on correct answers
-        feedback.textContent = "Correct!";
+        feedback.textContent = "Correct!"; // Render text on correct answers
     }
-    // Pause 1 second to display feedback text
-    feedback.removeAttribute("style");
+    feedback.removeAttribute("style"); // Reveal feedback text for 1 second
     setTimeout(function() {
         feedback.style.display = "none";
     }, 1000);
-    // Render next question
-    questionIndex++;
-
-    // If statement to load next question or end quiz
+    questionIndex++; // Onto next question
+    // If no more questions then end quiz, or load next
     if (questionIndex === questionsObject.length) {
         endOfQuiz();
     } else {
         nextQuestion();
     }
 }
+// Display text if time runs out
+function timeRanOut() {
+    timerContent.textContent = "Time ran out on you!";
+    timerContent.style = ("color: red; font-weight: bold");
+    setTimeout(function() {
+    timerContent.style.display = "none";
+    }, 2000);
+    endOfQuiz()
+}
 
 function endOfQuiz() {
-    timerContent.innerHTML = "";
-    // Stop timer
-    clearInterval(startTimer);
-
-    // Unhide finalPage
-    finalPage.removeAttribute("style");
-
-    // Render finalScore to span element
+    clearInterval(startTimer); // Stop timer
+    finalPage.removeAttribute("style"); // Unhide finalPage
     var finalScore = document.querySelector("#finalScore");
-    finalScore.textContent = score + timeLeft;
-
-    // Hide all elements for questionContent div and feedback div
-    quizContent.style.display = "none";
+    finalScore.textContent = score + timeLeft; // Render final score
+    quizContent.style.display = "none"; // Hide questionContent & feedback
     feedback.removeAttribute("style");
     setTimeout(function() {
         feedback.style.display = "none";
+        timerContent.innerHTML = "";
     }, 1000);
 }
 
@@ -170,22 +130,18 @@ function saveScore() {
     var initials = initialsInput.value.trim();
     // Score will be higher if there's more time left + correct answers
     var finalScore = timeLeft + score;
-
     // If statement, if initials aren't empty
     if (initials !== "") {
     // Get saved scores, if none, set to empty array
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-
     // New score object for score and initials
     var newScore = {
         score: finalScore,
         initials: initials
     };
-
     // Save input data to localStorage
     highscores.push(newScore);
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
-
     // window highscores redirect
     window.location.href = "highscores.html";
     }
