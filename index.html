@@ -8,35 +8,28 @@
     <title>JavaScript Quiz</title>
 </head>
 <body>
-    <!-- Top separated section for High Scores and Time Left -->
-    <div class="container">
+    <div class="container p-1"><!-- Separate container for High Scores and Time Left -->
         <div class="d-flex justify-content-between">
-            <class id="highScores"><button id ="highScores"><a href="highscores.html">View High Scores</button></a>
-            </class>
+                <a href="highscores.html"><button id ="topscores">
+                    View High Scores
+                </button></a>
             <span id="timeLeft" class="float-right"></span>
         </div>
     </div>
 
-    <div class="container p-5">
+    <div class="content container p-3">
         <div class="col-sm card-body">
-            <div id="welcomePage">
-            <h2 class="card-title text-center">Coding Quiz Challenge</h5>
-            <p class="card-text text-center">Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!</p>
-            <div class="text-center">
+            <div class="text-center" id="welcomePage">
+                <h2 class="card-title">Coding Quiz Challenge</h2>
+                <p class="card-text">Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!</p>
                 <button id="startQuiz">Start Quiz</button>
             </div>
-            </div>
-
             <div id="quizContent">
-                <h2 id="question"></h2>
-                <div id="multChoice"></div>
-            </div>    
-
-            <div id="subContent" class="col-sm card-body">
+                <h3 id="question"></h3>
+                <div id="multChoice" class="card-body"></div>
             </div>
-
-            <div id="finalPage" style="display:none">
-                <h2>All done!</h2>
+            <div class="card-body text-center" id="finalPage" style="display:none">
+                <h3>All done!</h3>
                 <p>Your final score is <span id="finalScore"></span>.
                 </p>
                 <p>Enter initials: 
@@ -44,10 +37,10 @@
                     <button id="submitButton">Submit</button>
                 </p>
             </div>
-            <div id="feedback" style="display: none;"></div>
+            <div class="card-body" id="feedback" style="display: none"></div>
         </div>
     </div>
 
-<script src="assets/script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 </html>
